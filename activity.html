@@ -81,10 +81,10 @@ nav a{margin:0 12px;text-decoration:none;color:#4285f4;font-weight:bold;}
 
   <div class="activity-card">
     <div class="photo-slider">
-      <img src="images/1.jpg" alt="活动照片">
-      <img src="images/2.jpg" alt="活动照片">
-      <img src="images/3.jpg" alt="活动照片">
-      <img src="images/4.jpg" alt="活动照片">
+      <img src="images/1.jpg" alt="活动照片"class=cliklmg>
+      <img src="images/2.jpg" alt="活动照片"class=cliklmg>
+      <img src="images/3.jpg" alt="活动照片"class=cliklmg>
+      <img src="images/4.jpg" alt="活动照片"class=cliklmg>
     </div>
     <div class="text">
       <h3>军训励志</h3>
@@ -94,12 +94,12 @@ nav a{margin:0 12px;text-decoration:none;color:#4285f4;font-weight:bold;}
 
   <div class="activity-card">
     <div class="photo-slider">
-      <img src="images/5.jpg" alt="活动照片">
-      <img src="images/6.jpg" alt="活动照片">
-      <img src="images/7.jpg" alt="活动照片">
-      <img src="images/8.jpg" alt="活动照片">
-      <img src="images/9.jpg" alt="活动照片">
-      <img src="images/10.jpg" alt="活动照片">
+      <img src="images/5.jpg" alt="活动照片"class=cliklmg>
+      <img src="images/6.jpg" alt="活动照片"class=cliklmg>
+      <img src="images/7.jpg" alt="活动照片"class=cliklmg>
+      <img src="images/8.jpg" alt="活动照片"class=cliklmg>
+      <img src="images/9.jpg" alt="活动照片"class=cliklmg>
+      <img src="images/10.jpg" alt="活动照片"class=cliklmg>
     </div>
     <div class="text">
       <h3>师生交流</h3>
@@ -116,9 +116,28 @@ nav a{margin:0 12px;text-decoration:none;color:#4285f4;font-weight:bold;}
       <p>凝心聚力，唱响华章</p >
     </div>
   </div>
-
 </div>
 </div>
 </div>
+  <!-- 放大弹窗 -->
+ <div class="img-modal" id="imgModal">
+     < img src="" id="bigImg">
+ </div>
+ <script>
+ let modal = document.getElementById('imgModal');
+ let bigImg = document.getElementById('bigImg');
+ // 点击图片放大
+ document.querySelectorAll('.photo-slider img').forEach(img=>{
+     img.onclick = function(){
+         bigImg.src = this.src;
+         modal.classList.add('show');
+     }
+ })
+ // 点击背景关闭
+ modal.onclick = function(){
+     modal.classList.remove('show');
+     }
+   })
+ </script>
 </body>
 </html>
